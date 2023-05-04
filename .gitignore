@@ -12,3 +12,4 @@ docs/
 
 # Dotenv file
 .env
+/crack-poc/node_modules/

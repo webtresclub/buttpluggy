@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" viewBox="0 0 800 800">
+  <defs>
+    <pattern id="a" width="20" height="20" patternTransform="scale(40)" patternUnits="userSpaceOnUse" shape-rendering="crispEdges">
+      <path fill="hsl(0, 0%, 60%)" d="M2 0h1v1H2zm1 0h1v1H3z"/>
+      <path fill="hsl(39, 100%, 89%)" d="M4 0h1v1H4zm1 0h1v1H5zm1 0h1v1H6zm1 0h1v1H7zm1 0h1v1H8zm1 0h1v1H9zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1z"/>
+      <path fill="hsl(0, 0%, 60%)" d="M2 1h1v1H2zm1 0h1v1H3z"/>
+      <path fill="hsl(39, 100%, 89%)" d="M4 1h1v1H4z"/>
+      <path fill="hsl(180, 69%, 30%)" d="M5 1h1v1H5zm1 0h1v1H6zm1 0h1v1H7zm1 0h1v1H8zm1 0h1v1H9zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1z"/>
+      <path fill="hsl(39, 100%, 89%)" d="M16 1h1v1h-1z"/>
+      <path fill="hsl(0, 0%, 60%)" d="M2 2h1v1H2zm1 0h1v1H3z"/>
+      <path fill="hsl(39, 100%, 89%)" d="M4 2h1v1H4z"/>
+      <path fill="hsl(180, 69%, 30%)" d="M5 2h1v1H5zm1 0h1v1H6zm1 0h1v1H7zm1 0h1v1H8zm1 0h1v1H9zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1z"/>
+      <path fill="hsl(39, 100%, 89%)" d="M16 2h1v1h-1z"/>
+      <path fill="hsl(0, 0%, 60%)" d="M2 3h1v1H2zm1 0h1v1H3z"/>
+      <path fill="hsl(39, 100%, 89%)" d="M4 3h1v1H4z"/>
+      <path fill="hsl(70, 69%, 50%)" d="M5 3h1v1H5z"/>
+      <path fill="hsl(180, 69%, 30%)" d="M6 3h1v1H6z"/>
+      <path fill="hsl(70, 69%, 50%)" d="M7 3h1v1H7z"/>
+      <path fill="hsl(180, 69%, 30%)" d="M8 3h1v1H8zm1 0h1v1H9zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1z"/>
+      <path fill="hsl(70, 69%, 50%)" d="M13 3h1v1h-1z"/>
+      <path fill="hsl(180, 69%, 30%)" d="M14 3h1v1h-1z"/>
+      <path fill="hsl(70, 69%, 50%)" d="M15 3h1v1h-1z"/>
+      <path fill="hsl(39, 100%, 89%)" d="M16 3h1v1h-1z"/>
+      <path fill="hsl(0, 0%, 60%)" d="M2 4h1v1H2zm1 0h1v1H3z"/>
+      <path fill="hsl(39, 100%, 89%)" d="M4 4h1v1H4z"/>
+      <path fill="hsl(70, 69%, 50%)" d="M5 4h1v1H5z"/>
+      <path fill="hsl(180, 69%, 30%)" d="M6 4h1v1H6z"/>
+      <path fill="hsl(70, 69%, 50%)" d="M7 4h1v1H7z"/>
+      <path fill="hsl(180, 69%, 30%)" d="M8 4h1v1H8zm1 0h1v1H9zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1z"/>
+      <path fill="hsl(70, 69%, 50%)" d="M13 4h1v1h-1z"/>
+      <path fill="hsl(180, 69%, 30%)" d="M14 4h1v1h-1z"/>
+      <path fill="hsl(70, 69%, 50%)" d="M15 4h1v1h-1z"/>
+      <path fill="hsl(39, 100%, 89%)" d="M16 4h1v1h-1z"/>
+      <path fill="hsl(0, 0%, 60%)" d="M2 5h1v1H2zm1 0h1v1H3z"/>
+      <path fill="hsl(39, 100%, 89%)" d="M4 5h1v1H4z"/>
+      <path fill="hsl(180, 69%, 30%)" d="M5 5h1v1H5z"/>
+      <path fill="hsl(70, 69%, 50%)" d="M6 5h1v1H6z"/>
+      <path fill="hsl(180, 69%, 30%)" d="M7 5h1v1H7zm1 0h1v1H8zm1 0h1v1H9zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1z"/>
+      <path fill="hsl(70, 69%, 50%)" d="M14 5h1v1h-1z"/>
+      <path fill="hsl(180, 69%, 30%)" d="M15 5h1v1h-1z"/>
+      <path fill="hsl(39, 100%, 89%)" d="M16 5h1v1h-1z"/>
+      <path fill="hsl(0, 0%, 60%)" d="M2 6h1v1H2zm1 0h1v1H3z"/>
+      <path fill="hsl(39, 100%, 89%)" d="M4 6h1v1H4z"/>
+      <path fill="hsl(180, 69%, 30%)" d="M5 6h1v1H5zm1 0h1v1H6zm1 0h1v1H7z"/>
+      <path fill="hsl(70, 69%, 50%)" d="M8 6h1v1H8z"/>
+      <path fill="hsl(180, 69%, 30%)" d="M9 6h1v1H9z"/>
+      <path fill="hsl(70, 69%, 50%)" d="M10 6h1v1h-1z"/>
+      <path fill="hsl(180, 69%, 30%)" d="M11 6h1v1h-1z"/>
+      <path fill="hsl(70, 69%, 50%)" d="M12 6h1v1h-1z"/>
+      <path fill="hsl(180, 69%, 30%)" d="M13 6h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1z"/>
+      <path fill="hsl(39, 100%, 89%)" d="M16 6h1v1h-1z"/>
+      <path fill="hsl(0, 0%, 60%)" d="M2 7h1v1H2zm1 0h1v1H3z"/>
+      <path fill="hsl(0, 0%, 0%)" d="M4 7h1v1H4z"/>
+      <path fill="hsl(180, 69%, 30%)" d="M5 7h1v1H5zm1 0h1v1H6zm1 0h1v1H7zm1 0h1v1H8z"/>
+      <path fill="hsl(70, 69%, 50%)" d="M9 7h1v1H9z"/>
+      <path fill="hsl(180, 69%, 30%)" d="M10 7h1v1h-1z"/>
+      <path fill="hsl(70, 69%, 50%)" d="M11 7h1v1h-1z"/>
+      <path fill="hsl(180, 69%, 30%)" d="M12 7h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1z"/>
+      <path fill="hsl(39, 100%, 89%)" d="M16 7h1v1h-1z"/>
+      <path fill="hsl(0, 0%, 0%)" d="M18 7h1v1h-1zM2 8h1v1H2zm1 0h1v1H3zm1 0h1v1H4zm1 0h1v1H5z"/>
+      <path fill="hsl(180, 69%, 30%)" d="M6 8h1v1H6zm1 0h1v1H7zm1 0h1v1H8z"/>
+      <path fill="hsl(70, 69%, 50%)" d="M9 8h1v1H9z"/>
+      <path fill="hsl(180, 69%, 30%)" d="M10 8h1v1h-1z"/>
+      <path fill="hsl(70, 69%, 50%)" d="M11 8h1v1h-1z"/>
+      <path fill="hsl(180, 69%, 30%)" d="M12 8h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1z"/>
+      <path fill="hsl(39, 100%, 89%)" d="M16 8h1v1h-1z"/>
+      <path fill="hsl(0, 0%, 0%)" d="M17 8h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1zM2 9h1v1H2zm1 0h1v1H3zm1 0h1v1H4zm1 0h1v1H5z"/>
+      <path fill="hsl(180, 69%, 30%)" d="M6 9h1v1H6zm1 0h1v1H7zm1 0h1v1H8zm1 0h1v1H9zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1z"/>
+      <path fill="hsl(39, 100%, 89%)" d="M16 9h1v1h-1z"/>
+      <path fill="hsl(0, 0%, 0%)" d="M17 9h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1z"/>
+      <path fill="hsl(0, 0%, 60%)" d="M2 10h1v1H2zm1 0h1v1H3z"/>
+      <path fill="hsl(39, 100%, 89%)" d="M4 10h1v1H4zm1 0h1v1H5zm1 0h1v1H6zm1 0h1v1H7zm1 0h1v1H8zm1 0h1v1H9zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1z"/>
+      <path fill="hsl(0, 0%, 60%)" d="M2 11h1v1H2zm1 0h1v1H3z"/>
+      <path fill="hsl(39, 100%, 89%)" d="M4 11h1v1H4z"/>
+      <path fill="hsl(0, 0%, 45%)" d="M5 11h1v1H5zm1 0h1v1H6zm1 0h1v1H7zm1 0h1v1H8zm1 0h1v1H9zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1z"/>
+      <path fill="hsl(39, 100%, 89%)" d="M16 11h1v1h-1z"/>
+      <path fill="hsl(0, 0%, 60%)" d="M2 12h1v1H2zm1 0h1v1H3z"/>
+      <path fill="hsl(39, 100%, 89%)" d="M4 12h1v1H4z"/>
+      <path fill="hsl(0, 0%, 75%)" d="M5 12h1v1H5z"/>
+      <path fill="hsl(335, 77%, 50%)" d="M6 12h1v1H6z"/>
+      <path fill="hsl(0, 0%, 75%)" d="M7 12h1v1H7z"/>
+      <path fill="hsl(335, 77%, 50%)" d="M8 12h1v1H8z"/>
+      <path fill="hsl(0, 0%, 75%)" d="M9 12h1v1H9z"/>
+      <path fill="hsl(205, 69%, 50%)" d="M10 12h1v1h-1z"/>
+      <path fill="hsl(0, 0%, 75%)" d="M11 12h1v1h-1z"/>
+      <path fill="hsl(205, 69%, 50%)" d="M12 12h1v1h-1z"/>
+      <path fill="hsl(0, 0%, 75%)" d="M13 12h1v1h-1z"/>
+      <path fill="hsl(50, 98%, 50%)" d="M14 12h1v1h-1z"/>
+      <path fill="hsl(0, 0%, 75%)" d="M15 12h1v1h-1z"/>
+      <path fill="hsl(39, 100%, 89%)" d="M16 12h1v1h-1z"/>
+      <path fill="hsl(0, 0%, 60%)" d="M2 13h1v1H2zm1 0h1v1H3z"/>
+      <path fill="hsl(39, 100%, 89%)" d="M4 13h1v1H4z"/>
+      <path fill="hsl(0, 0%, 75%)" d="M5 13h1v1H5zm1 0h1v1H6zm1 0h1v1H7zm1 0h1v1H8zm1 0h1v1H9zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1z"/>
+      <path fill="hsl(39, 100%, 89%)" d="M16 13h1v1h-1z"/>
+      <path fill="hsl(0, 0%, 60%)" d="M2 14h1v1H2zm1 0h1v1H3z"/>
+      <path fill="hsl(39, 100%, 89%)" d="M4 14h1v1H4zm1 0h1v1H5zm1 0h1v1H6zm1 0h1v1H7zm1 0h1v1H8zm1 0h1v1H9zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1z"/>
+      <path fill="hsl(0, 0%, 0%)" d="M6 15h1v1H6zm1 0h1v1H7zm4 0h1v1h-1zm1 0h1v1h-1zm-6 1h1v1H6zm1 0h1v1H7zm4 0h1v1h-1zm1 0h1v1h-1zm-6 1h1v1H6zm1 0h1v1H7zm4 0h1v1h-1zm1 0h1v1h-1zm-6 1h1v1H6zm1 0h1v1H7zm4 0h1v1h-1zm1 0h1v1h-1zm-6 1h1v1H6zm1 0h1v1H7zm1 0h1v1H8zm3 0h1v1h-1zm1 0h1v1h-1zm1 0h1v1h-1z"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#a)"/>
+</svg>
