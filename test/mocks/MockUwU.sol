@@ -1,13 +1,11 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
+import {ERC721} from "solmate/tokens/ERC721.sol";
 import "../../src/IUwU.sol";
 
-contract MockUwU is IUwU {
-    string public name = "Buttpluggy";
-    string public symbol = "UwU";
+contract MockUwU is ERC721("Buttpluggy", "UwU") {
     address public immutable owner = msg.sender;
-
 
     mapping(uint256 seed => address user) public seedToUser;
     mapping(address user => uint256 seed) public userToSeed;
@@ -20,8 +18,8 @@ contract MockUwU is IUwU {
         userToSeed[user] = genSeed;
     }
 
-    function tokenURI(uint256) external pure returns (string memory) {
+    function tokenURI(uint256) public view override returns (string memory) {
         return "";
     }
-
 }
+ 
