@@ -4,3 +4,12 @@
 [submodule "lib/forge-gas-snapshot"]
 	path = lib/forge-gas-snapshot
 	url = https://github.com/marktoda/forge-gas-snapshot
+[submodule "lib/foundry-huff"]
+	path = lib/foundry-huff
+	url = https://github.com/huff-language/foundry-huff
+[submodule "lib/huffmate"]
+	path = lib/huffmate
+	url = https://github.com/pentagonxyz/huffmate
+[submodule "lib/Huff-Console.git"]
+	path = lib/Huff-Console.git
+	url = https://github.com/AmadiMichael/Huff-Console.git

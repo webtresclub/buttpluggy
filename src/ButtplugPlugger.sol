@@ -3,7 +3,7 @@ pragma solidity 0.8.19;
 
 import {IUwU} from "./IUwU.sol";
 
-contract ButtPlugPlugger {
+contract ButtplugPlugger {
     /// @dev The difficulty is the number of 0s that the hash of the address and the nonce must have
     ///      5 means 0x00000, anf im expecting to take a few secs to find a nonce
     uint256 public constant DEFAULT_DIFFICULTY = 5;

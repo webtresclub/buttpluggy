@@ -1,0 +1,125 @@
+#include "huffmate/tokens/ERC721.huff"
+#include "huffmate/utils/CommonErrors.huff"
+
+// Metadata
+// META_NAME = "Buttpluggy"
+#define constant META_NAME = 0x42757474706c7567677900000000000000000000000000000000000000000000
+#define constant META_NAME_LENGTH = 0x0a
+
+// META_SYMBOL = "UwU"
+#define constant META_SYMBOL = 0x5577550000000000000000000000000000000000000000000000000000000000
+#define constant META_SYMBOL_LENGTH = 0x03
+
+// Must set the owner on deployment
+#define constant OWNER = 0x00
+
+// Storage Slots
+#define constant TOTAL_SUPPLY_SLOT = FREE_STORAGE_POINTER()
+
+
+/// Interface
+#define function totalSupply() nonpayable returns (uint256)
+#define function owner() nonpayable returns (address)
+
+
+
+/// @notice Only Owner Modifier
+#define macro ONLY_OWNER_MODIFIER() = takes (0) returns (0) {
+    [OWNER]                                 // [owner]
+    caller eq authed jumpi                  // []
+    ONLY_OWNER(0x00)                        // []
+    authed:                                 // []
+}
+
+
+#define macro MINT() = takes (0) returns (0) {
+    ONLY_OWNER_MODIFIER()                   // []
+    // @todo
+}
+
+#define macro TOTAL_SUPPLY() = takes (0) returns (0) {
+    [TOTAL_SUPPLY_SLOT] sload
+    0x00 mstore
+    0x00 0x20 return
+}
+
+
+// Function Dispatch
+#define macro MAIN() = takes (0) returns (0) {
+    // @dev In prodiction we will be using PUSH0 instead of PUSH1 0x00
+    0x00 calldataload 0xE0 shr  // [sig]
+
+    // Mint and Burning Functions
+    dup1 __FUNC_SIG(mint)                       eq mint_jump jumpi
+    dup1 __FUNC_SIG(totalSupply)                eq totalSupply_jump jumpi
+    
+    dup1 __FUNC_SIG(approve)                    eq approve jumpi
+    dup1 __FUNC_SIG(setApprovalForAll)          eq setApprovalForAll jumpi
+
+    dup1 __FUNC_SIG(transferFrom)               eq transferFrom jumpi
+    dup1 __FUNC_SIG(safeTransferFrom)           eq safeTransferFrom jumpi
+
+    dup1 __FUNC_SIG(name)                       eq name jumpi
+    dup1 __FUNC_SIG(symbol)                     eq symbol jumpi
+    dup1 __FUNC_SIG(tokenURI)                   eq tokenURI jumpi
+    dup1 __FUNC_SIG(supportsInterface)          eq supportsInterface jumpi
+
+    dup1 __FUNC_SIG(getApproved)                eq getApproved jumpi
+    dup1 __FUNC_SIG(isApprovedForAll)           eq isApprovedForAll jumpi
+
+    dup1 __FUNC_SIG(balanceOf)                  eq balanceOf jumpi
+    dup1 __FUNC_SIG(ownerOf)                    eq ownerOf jumpi
+
+    dup1 __FUNC_SIG("safeTransferFrom(address,address,uint256,bytes)") eq safeTransferFromData jumpi
+
+    dup1 __FUNC_SIG("owner()")                  eq owner_jump jumpi
+
+    // Revert on failed dispatch
+    0x00 dup1 revert
+
+/*
+    safe_mint:
+        SAFE_MINT()
+    safe_mint_with_data:
+        SAFE_MINT_WITH_DATA()
+*/
+    mint_jump:
+        MINT()
+    totalSupply_jump:
+        TOTAL_SUPPLY()
+    
+    approve:
+        APPROVE()
+    setApprovalForAll:
+        SET_APPROVAL_FOR_ALL()
+
+    transferFrom:
+        TRANSFER_FROM()
+    safeTransferFrom:
+        SAFE_TRANSFER_FROM()
+    safeTransferFromData:
+        SAFE_TRANSFER_FROM_WITH_DATA()
+
+    name:
+        NAME()
+    symbol:
+        SYMBOL()
+    tokenURI:
+        TOKEN_URI()
+    supportsInterface:
+        SUPPORTS_INTERFACE()
+
+    getApproved:
+        GET_APPROVED()
+    isApprovedForAll:
+        IS_APPROVED_FOR_ALL()
+
+    balanceOf:
+        BALANCE_OF()
+    ownerOf:
+        OWNER_OF()
+
+    owner_jump:
+        [OWNER] 0x00 mstore
+        0x00 0x20 return
+}

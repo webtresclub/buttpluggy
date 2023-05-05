@@ -1,0 +1,9 @@
+Huff-Console.git/=lib/Huff-Console.git/
+ds-test/=lib/forge-std/lib/ds-test/src/
+forge-gas-snapshot/=lib/forge-gas-snapshot/src/
+forge-std/=lib/forge-std/src/
+foundry-huff/=lib/foundry-huff/src/
+huffmate/=lib/huffmate/src/
+solidity-stringutils/=lib/foundry-huff/lib/solidity-stringutils/
+solmate/=lib/huffmate/lib/solmate/src/
+stringutils/=lib/foundry-huff/lib/solidity-stringutils/

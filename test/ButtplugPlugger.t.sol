@@ -2,13 +2,16 @@
 pragma solidity ^0.8.13;
 
 import "forge-std/Test.sol";
-import "../src/ButtPlugPlugger.sol";
+import {GasSnapshot} from "forge-gas-snapshot/GasSnapshot.sol";
+import "../src/ButtplugPlugger.sol";
+import "./mocks/MockUwU.sol";
 
-contract ButtplugTest is Test {
-    ButtPlugPlugger public bplug;
+contract ButtplugPluggerTest is Test, GasSnapshot {
+    ButtplugPlugger public bplug;
 
     function setUp() public {
-        bplug = new ButtPlugPlugger(address(new MockUwU()));
+        bplug = new ButtplugPlugger(address(new MockUwU()));
+        snapSize("ButtplugPluggerV1", address(bplug));
     }
 
     function testCurveVERGA() public {
@@ -24,20 +27,8 @@ contract ButtplugTest is Test {
         address user = makeAddr("user");
         console.logBytes(abi.encodePacked(msg.sender, bplug.salt(), CALCULATED_SEED));
         vm.startPrank(user);
+        snapStart("MintWithPlugConsentV1");
         bplug.plugConsent(CALCULATED_SEED);
+        snapEnd();
     }
-}
-
-contract MockUwU is IUwU {
-    mapping(uint256 seed => address user) public seedToUser;
-    mapping(address user => uint256 seed) public userToSeed;
-    uint256 public totalSupply;
-
-
-    function plug(address user, uint256 genSeed) external {
-        ++totalSupply;
-        seedToUser[genSeed] = user;
-        userToSeed[user] = genSeed;
-    }
-
 }
