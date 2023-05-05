@@ -18,8 +18,10 @@
 
 
 /// Interface
-#define function totalSupply() nonpayable returns (uint256)
-#define function owner() nonpayable returns (address)
+#define function totalSupply() view returns (uint256)
+#define function owner() view returns (address)
+// mint Function
+#define function plug(address user, uint256 genSeed) nonpayable returns ()
 
 
 
@@ -32,9 +34,14 @@
 }
 
 
-#define macro MINT() = takes (0) returns (0) {
+/// @dev Mint Function
+#define macro PLUG() = takes (0) returns (0) {
     ONLY_OWNER_MODIFIER()                   // []
-    // @todo
+    
+    0x24 calldataload                       // [tokenId]
+    0x04 calldataload                       // [to, tokenId]
+    
+    _MINT()
 }
 
 #define macro TOTAL_SUPPLY() = takes (0) returns (0) {
@@ -50,14 +57,14 @@
     0x00 calldataload 0xE0 shr  // [sig]
 
     // Mint and Burning Functions
-    dup1 __FUNC_SIG(mint)                       eq mint_jump jumpi
+    dup1 __FUNC_SIG(plug)                       eq plug_jump jumpi
     dup1 __FUNC_SIG(totalSupply)                eq totalSupply_jump jumpi
-    
-    dup1 __FUNC_SIG(approve)                    eq approve jumpi
-    dup1 __FUNC_SIG(setApprovalForAll)          eq setApprovalForAll jumpi
 
     dup1 __FUNC_SIG(transferFrom)               eq transferFrom jumpi
     dup1 __FUNC_SIG(safeTransferFrom)           eq safeTransferFrom jumpi
+
+    dup1 __FUNC_SIG(approve)                    eq approve jumpi
+    dup1 __FUNC_SIG(setApprovalForAll)          eq setApprovalForAll jumpi
 
     dup1 __FUNC_SIG(name)                       eq name jumpi
     dup1 __FUNC_SIG(symbol)                     eq symbol jumpi
@@ -77,14 +84,8 @@
     // Revert on failed dispatch
     0x00 dup1 revert
 
-/*
-    safe_mint:
-        SAFE_MINT()
-    safe_mint_with_data:
-        SAFE_MINT_WITH_DATA()
-*/
-    mint_jump:
-        MINT()
+    plug_jump:
+        PLUG()
     totalSupply_jump:
         TOTAL_SUPPLY()
     

@@ -15,6 +15,8 @@ contract ButtplugyTest is Test, GasSnapshot {
         snapSize("ButtplugyV1", address(buttpluggy));
         
     }
+
+    // gets crazy with invariant test invariantMetadata() public {
     function testMetadata() public {
       assertEq(buttpluggy.symbol(), "UwU");
       assertEq(buttpluggy.name(), "Buttpluggy");
