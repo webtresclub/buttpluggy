@@ -11,7 +11,7 @@
 #define constant META_SYMBOL_LENGTH = 0x03
 
 // Must set the owner on deployment
-#define constant OWNER = 0x00
+#define constant OWNER = 0x01
 
 // Storage Slots
 #define constant TOTAL_SUPPLY_SLOT = FREE_STORAGE_POINTER()
@@ -40,7 +40,7 @@
 #define macro TOTAL_SUPPLY() = takes (0) returns (0) {
     [TOTAL_SUPPLY_SLOT] sload
     0x00 mstore
-    0x00 0x20 return
+    0x20 0x00 return
 }
 
 
@@ -121,5 +121,5 @@
 
     owner_jump:
         [OWNER] 0x00 mstore
-        0x00 0x20 return
+        0x20 0x00 return
 }

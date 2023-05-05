@@ -11,7 +11,7 @@ contract ButtplugyTest is Test, GasSnapshot {
     IUwU public buttpluggy;
 
     function setUp() public {
-        buttpluggy = IUwU(HuffDeployer.config().with_addr_constant("owner", address(this)).deploy("Buttpluggy"));
+        buttpluggy = IUwU(HuffDeployer.config().with_addr_constant("OWNER", address(this)).deploy("Buttpluggy"));
         snapSize("ButtplugyV1", address(buttpluggy));
         
     }
