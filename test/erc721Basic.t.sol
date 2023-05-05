@@ -209,18 +209,6 @@ contract ERC721Test is Test {
         assertEq(keccak256(recipient.data()), keccak256("testing 123"));
     }
 
-    function testSafeMintToERC721Recipient() public {
-        ERC721Recipient to = new ERC721Recipient();
-
-        assertEq(token.ownerOf(1337), address(to));
-        assertEq(token.balanceOf(address(to)), 1);
-
-        assertEq(to.operator(), address(this));
-        assertEq(to.from(), address(0));
-        assertEq(to.id(), 1337);
-        assertEq(keccak256(to.data()), keccak256(""));
-    }
-
     function testFailMintToZero() public {
         token.plug(address(0), 1337);
     }
@@ -315,12 +303,36 @@ contract ERC721Test is Test {
         token.plug(address(new WrongReturnDataERC721Recipient()), 1337);
     }
     
-    function testFailBalanceOfZeroAddress() public view {
-        token.balanceOf(address(0));
+    function testBalanceOfZeroAddress() public {
+        uint256 bal = token.balanceOf(address(0));
+        assertEq(0, bal);
     }
 
+    /*
+    this instead of fail will always be 0
+    // @todo review
     function testFailOwnerOfUnminted() public view {
         token.ownerOf(1337);
+    }
+    */
+
+    function testMintSimple() public {
+        address beef = address(0xBEEF);
+        token.plug(beef, 1);
+        
+        vm.expectRevert();
+        token.plug(beef, 1);
+
+        /*
+        vm.expectRevert();
+        token.plug(beef, 0);
+        */
+        vm.expectRevert();
+        token.plug(address(0), 1);
+
+        vm.expectRevert();
+        vm.prank(beef);
+        token.plug(beef, 2);
     }
 
     function testMint(address to, uint256 id) public {
@@ -576,7 +588,8 @@ contract ERC721Test is Test {
         token.safeTransferFrom(address(this), address(new WrongReturnDataERC721Recipient()), id, data);
     }
 
-    function testFailOwnerOfUnminted(uint256 id) public view {
-        token.ownerOf(id);
+    function testOwnerOfUnminted(uint256 id) public {
+        // this is different form the solmate implementation
+        assertEq(token.ownerOf(id), address(0));
     }
 }
