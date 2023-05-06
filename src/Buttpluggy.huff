@@ -58,6 +58,16 @@
     _MINT()
 }
 
+
+#define macro CONSTRUCTOR() = takes (0) returns (0) {
+    // mint wallets should be order in desc, and for mint just add delta between wallets to save gas
+    // mint demo
+    // 0x690B9A9E9aa1C9dB991C7721a92d351Db4FaC990
+    // 0x01 dup2
+    // 0x02 dup2 0x4445 add // trick to save gas on minting
+    // _MINT()
+}
+
 #define macro TOTAL_SUPPLY() = takes (0) returns (0) {
     [TOTAL_SUPPLY_SLOT] sload
     0x00 mstore
